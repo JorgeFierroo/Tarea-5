@@ -43,7 +43,6 @@ class Estudiante(Persona):
     def semestre(self, semestre):
         if isinstance(semestre, int):
             self.__semestre = semestre
-            # Aquí puedes poner el código que deseas ejecutar
         else:
             print("La variable no es un entero.")
 
