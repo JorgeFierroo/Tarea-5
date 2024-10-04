@@ -7,6 +7,7 @@ class Grupo:
     contador_grupos = 0
 
     def __init__(self, numero_grupo, asignatura, profesor):
+        Grupo.contador_grupos += 1
         self.__numero_grupo = numero_grupo
         self.__asignatura = asignatura
         self.__profesor = profesor
@@ -57,5 +58,5 @@ class Grupo:
         else:
             raise TypeError("Solo se pueden agregar instancias de la clase 'Profesor'.")
         
-    def mostrar_info(self):
+    def mostrar_grupo(self):
         return f"numero del grupo: {self.__numero_grupo} Asignatura: {self.__asignatura.nombre} Profesor: {self.__profesor.nombre}"

@@ -14,14 +14,16 @@ asig = Asignatura("Fisica", "A321", 1)
 grupo1 = Grupo(1, asig, prof)
 grupo2 = Grupo(2, asig, prof)
 
-print(grupo1.agregar_estudiante(est))
-print(grupo1.agregar_estudiante(est1))
-print(grupo1.estudiantes())
+grupo1.agregar_estudiante(est)
+#print(grupo1.agregar_estudiante(est1))
+grupo1.estudiantes()
 grupo1.profesor = prof1
-print(grupo1.profesor)
+grupo1.profesor
 
 progra1 = ProgramaAcademico("holaa", "dada")
 
-print(progra1.agregar_grupo(grupo1))
-print(progra1.agregar_grupo(grupo2))
-print(progra1.grupos())
+progra1.agregar_grupo(grupo1)
+progra1.agregar_grupo(grupo2)
+for i in progra1.grupos:
+    print(i.mostrar_grupo())
+

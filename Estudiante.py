@@ -5,6 +5,7 @@ class Estudiante(Persona):
     contador_estudiantes = 0
 
     def __init__(self, nombre, apellido, fecha_de_nacimiento, matricula, carrera, semestre):
+        Estudiante.contador_personas += 1
         super().__init__(nombre, apellido, fecha_de_nacimiento)
         self.__matricula = matricula
         self.__carrera = carrera
