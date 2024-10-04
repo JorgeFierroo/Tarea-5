@@ -1,6 +1,7 @@
-
-
 class Persona:
+
+    contador_personas = 0
+
     def __init__(self, nombre, apellido, fecha_de_nacimiento):
         self.__nombre = nombre
         self.__apellido = apellido
@@ -44,6 +45,3 @@ class Persona:
 
     
 pers = Persona("jorge", "fierro", "27/01/2004")
-
-pers.nombre = " "
-print(pers.nombre)

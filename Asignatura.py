@@ -1,4 +1,7 @@
 class Asignatura:
+
+    contador_asignaturas = 0
+
     def __init__(self, nombre, codigo, creditos):
 
         if not isinstance(nombre, str):
@@ -49,11 +52,3 @@ class Asignatura:
             self.__creditos = creditos
         else:
             print("La variable no es un entero.")
-
-    
-    
-asig = Asignatura("Fisica", "A321", 1)
-
-asig.nombre = "Fisica I"
-print(asig.nombre)
-print(asig.mostrar_informacion())

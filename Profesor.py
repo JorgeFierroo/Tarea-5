@@ -1,6 +1,9 @@
 from Persona import Persona
 
 class Profesor(Persona):
+
+    contador_profesor = 0
+
     def __init__(self, nombre, apellido, fecha_nacimiento, numero_empleado, departamento):
         super().__init__(nombre, apellido, fecha_nacimiento)
         self.__numero_empleado = numero_empleado
@@ -33,10 +36,3 @@ class Profesor(Persona):
             self.__departamento = departamento
         else:
             print("El nombre no debe contener numeros.")
-
-    
-
-    
-prof = Profesor("David", "Martinez", "27/01/2004", "210", "fisica")
-
-print(prof.presentarse())

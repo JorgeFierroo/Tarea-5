@@ -3,6 +3,9 @@ from Profesor import Profesor
 from Asignatura import Asignatura
 
 class Grupo:
+
+    contador_grupos = 0
+
     def __init__(self, numero_grupo, asignatura, profesor):
         self.__numero_grupo = numero_grupo
         self.__asignatura = asignatura
@@ -35,12 +38,12 @@ class Grupo:
     def agregar_estudiante(self, estudiante):
         if isinstance(estudiante, Estudiante):
             self._estudiantes.append(estudiante)
-            print(f"Estudiante {estudiante.nombre} agregado a la asignatura {self.__asignatura.nombre}.")
+            return(f"Estudiante {estudiante.nombre} agregado a la asignatura {self.__asignatura.nombre}.")
         else:
             raise TypeError("Solo se pueden agregar instancias de la clase 'Estudiante'.")
         
     def estudiantes(self):
-        print([estudiante.nombre for estudiante in self._estudiantes])
+        return[estudiante.nombre for estudiante in self._estudiantes]
 
     @property
     def profesor(self):
@@ -54,16 +57,5 @@ class Grupo:
         else:
             raise TypeError("Solo se pueden agregar instancias de la clase 'Profesor'.")
         
-est = Estudiante("jorge", "fierro", "27/01/2004", "2023","ingenieria civil informatica", 2)
-est1 = Estudiante("pepito", "fierro", "27/01/2004", "2023","ingenieria civil informatica", 2)
-prof = Profesor("David", "Martinez", "27/01/2004", "210", "fisica")
-prof1 = Profesor("Julio", "Martinez", "27/01/2004", "210", "fisica")
-asig = Asignatura("Fisica", "A321", 1)  
-
-grupo1 = Grupo(1, asig, prof)
-
-grupo1.agregar_estudiante(est)
-grupo1.agregar_estudiante(est1)
-grupo1.estudiantes()
-grupo1.profesor = prof1
-print(grupo1.profesor)
+    def mostrar_info(self):
+        return f"numero del grupo: {self.__numero_grupo} Asignatura: {self.__asignatura.nombre} Profesor: {self.__profesor.nombre}"

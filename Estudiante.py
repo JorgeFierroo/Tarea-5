@@ -1,6 +1,9 @@
 from Persona import Persona
 
 class Estudiante(Persona):
+
+    contador_estudiantes = 0
+
     def __init__(self, nombre, apellido, fecha_de_nacimiento, matricula, carrera, semestre):
         super().__init__(nombre, apellido, fecha_de_nacimiento)
         self.__matricula = matricula
@@ -45,5 +48,3 @@ class Estudiante(Persona):
             self.__semestre = semestre
         else:
             print("La variable no es un entero.")
-
-est = Estudiante("jorge", "fierro", "27/01/2004", "2023","ingenieria civil informatica", 2)
