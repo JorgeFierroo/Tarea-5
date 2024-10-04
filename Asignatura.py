@@ -12,6 +12,8 @@ class Asignatura:
         
         if not isinstance(creditos, int):
             raise ValueError("Los créditos deben ser un número entero (int).")
+
+        Asignatura.contador_asignaturas += 1
         
         self.__nombre = nombre
         self.__codigo = codigo

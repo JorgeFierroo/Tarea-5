@@ -5,6 +5,7 @@ class ProgramaAcademico:
     contador_programas = 0
 
     def __init__(self, nombre, codigo):
+        ProgramaAcademico.contador_programas += 1
         self.__nombre = nombre
         self.__codigo = codigo
         self.__grupos = []
@@ -56,7 +57,7 @@ class ProgramaAcademico:
             self.__codigo = codigo
         else:
             print("El nombre no debe contener numeros.")
-
+    
+    @property
     def grupos(self):
-        for i in self.__grupos:
-            print(i.mostrar_info())
+        return self.__grupos

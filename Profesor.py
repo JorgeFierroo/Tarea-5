@@ -5,6 +5,7 @@ class Profesor(Persona):
     contador_profesor = 0
 
     def __init__(self, nombre, apellido, fecha_nacimiento, numero_empleado, departamento):
+        Profesor.contador_profesor += 1
         super().__init__(nombre, apellido, fecha_nacimiento)
         self.__numero_empleado = numero_empleado
         self.__departamento = departamento

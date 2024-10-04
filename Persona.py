@@ -3,6 +3,7 @@ class Persona:
     contador_personas = 0
 
     def __init__(self, nombre, apellido, fecha_de_nacimiento):
+        Persona.contador_personas += 1
         self.__nombre = nombre
         self.__apellido = apellido
         self.__fecha_de_nacimiento = fecha_de_nacimiento
